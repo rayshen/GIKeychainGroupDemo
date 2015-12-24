@@ -18,10 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *accountKey=@"accountKey";
-    NSString *accountName3=@"Apple";
+    NSString *accountName3=@"Google";
+    NSString *accountName4=@"Apple";
     if ([GIKeychain getKeychainDataForKey:accountKey]) {
         NSLog(@"该key内容已经存在,为:%@",[GIKeychain getKeychainDataForKey:accountKey]);
-        [GIKeychain addKeychainData:accountName3 forKey:accountKey];
+        [GIKeychain addKeychainData:accountName4 forKey:accountKey];
         NSLog(@"该key内容被修改,为:%@",[GIKeychain getKeychainDataForKey:accountKey]);
         
     }else{
